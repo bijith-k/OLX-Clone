@@ -1,17 +1,21 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
- 
+import { BrowserRouter as Router, Route , Routes} from 'react-router-dom';
+import Signup from './Pages/Signup'
 import Home from './Pages/Home';
 
 function App() {
   return (
     <div>
       <Router>
-        <Route path ='/' >
-        <Home />
-        </Route>
+        <Routes>
+        <Route exact path ='/' element={<Home />} />
+        
+        
+        <Route path ='/signup' element={<Signup />} />
+        
+        
+        </Routes>
       </Router>
     </div>
   );
